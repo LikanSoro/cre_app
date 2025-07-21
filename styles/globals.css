@@ -1,0 +1,25 @@
+/* Import your font first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Use Inter everywhere */
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom button utilities */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition;
+}
+.btn-primary {
+  /* Primary uses your brand color */
+  @apply bg-brand text-white hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand;
+}
+.btn-secondary {
+  /* Secondary is white with a brand border */
+  @apply bg-white text-brand border border-brand hover:bg-brand/5 focus:outline-none focus:ring-2 focus:ring-brand;
+}
